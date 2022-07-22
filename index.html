@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="fonts" href="https://fonts.googleapis.com">
+    <link rel="fonts" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Staatliches&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/open-iconic/1.1.1/font/css/open-iconic-bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/style.css"/>
+    <title>Weather Report</title>
+</head>
+
+<!--Main Content-->
+<body>
+    <header>
+        Weather Dashboard
+    </header>
+    
+    <main class="container">
+        <!--Search for a City-->
+        <section class="row">
+            <div class="col-12 col-md-3 p-2 searchform">
+                <!--Form for Searching City-->
+                <form id="searchcity" class="border">
+                    <h2>Search for a City:</h2>
+                    <input id="city" type="text" class="form-input" />
+                    <button type="submit" class="btn btn-primary">Show the Forecast</button>
+                </form>
+                <!--History of Searches-->
+                <div id="history-btns" class="historysearch border"></div>
+            </div>
+        </section>
+        <!--Chosen City Weather-->
+        <section id="currentweather" class="row border selection city">
+            <div class="col-12 col-md-9">
+                <h2 id="searchedfor"></h2>
+                <div id="weathercontainer" class="listgroup"></div>
+            </div>
+        </section>>
+        <!--5 Day Forecast-->
+        <section id="fiveday" class="row border">
+            <h2 id="forecast" class="col-12 col-md-9 col-md-3"></h3>
+            <div id="fivedisplay" class="fiverow"></div>
+        </section>
+    </main>
+
+    <!--Link to JS/jQuery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="./assets/script.js"></script>
+</body>
+</html>
